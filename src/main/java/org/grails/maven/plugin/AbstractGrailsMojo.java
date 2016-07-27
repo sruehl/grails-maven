@@ -172,20 +172,20 @@ public abstract class AbstractGrailsMojo extends AbstractMojo {
     /**
      * The Maven settings reference.
      */
-    @Parameter(property = "settings")
+    @Parameter(defaultValue = "${settings}", readonly = true)
     protected Settings settings;
 
     /**
      * POM
      */
-    @Parameter(property = "project")
+    @Parameter(defaultValue = "${project}", readonly = true)
     protected MavenProject project;
 
 
     /**
      * The current repository/network configuration of Maven.
      */
-    @Parameter(property = "localRepository")
+    @Parameter(defaultValue = "${localRepository}", readonly = true)
     private ArtifactRepository localRepository;
 
     /**
