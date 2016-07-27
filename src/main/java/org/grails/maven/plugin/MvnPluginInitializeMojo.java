@@ -36,13 +36,13 @@ public class MvnPluginInitializeMojo extends AbstractGrailsMojo {
     /**
      * The artifact id of the project.
      */
-    @Parameter(name = "project.artifactId", required = true, readonly = true)
+    @Parameter(defaultValue = "${project.artifactId}", readonly = true )
     private String artifactId;
 
     /**
      * The version id of the project.
      */
-    @Parameter(name = "project.version", required = true, readonly = true)
+    @Parameter(defaultValue = "${project.version}", readonly = true )
     private String version;
 
     public void execute() throws MojoExecutionException, MojoFailureException {

@@ -81,7 +81,7 @@ public abstract class AbstractGrailsMojo extends AbstractMojo {
     /**
      * The directory where is launched the mvn command.
      */
-    @Parameter(defaultValue = "${basedir}")
+    @Parameter( defaultValue = "${project.basedir}", readonly = true )
     protected File basedir;
 
     /**
