@@ -32,13 +32,13 @@ public class MvnGrailsAppWarMojo extends MvnWarMojo {
     /**
      * The maven artifact.
      */
-    @Parameter(defaultValue = "${project.artifact}")
+    @Parameter(defaultValue = "${project.artifact}", readonly = true)
     private Artifact artifact;
 
     /**
      * The artifact handler.
      */
-    @Component(hint = "gails-app")
+    @Parameter(defaultValue = "${component.org.apache.maven.artifact.handler.ArtifactHandler#gails-app}", readonly = true)
     private ArtifactHandler artifactHandler;
 
     @Override

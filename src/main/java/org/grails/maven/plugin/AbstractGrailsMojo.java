@@ -241,13 +241,13 @@ public abstract class AbstractGrailsMojo extends AbstractMojo {
     /**
      * The current repository/network configuration of Maven.
      */
-    @Parameter(defaultValue = "${repositorySystemSession}")
+    @Parameter(defaultValue = "${repositorySystemSession}", readonly = true)
     private RepositorySystemSession repoSession;
 
     /**
      * The project's remote repositories to use for the resolution of plugins and their dependencies.
      */
-    @Parameter(defaultValue = "${project.remoteProjectRepositories}")
+    @Parameter(defaultValue = "${project.remoteProjectRepositories}", readonly = true)
     private List<RemoteRepository> remoteRepos;
 
 

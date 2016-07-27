@@ -42,19 +42,19 @@ public class GrailsPackagePluginMojo extends AbstractGrailsMojo {
      * The artifact that this project produces.
      *
      */
-    @Parameter(defaultValue = "${project.artifact}")
+    @Parameter(defaultValue = "${project.artifact}", readonly = true)
     private Artifact artifact;
 
     /**
      * The artifact handler.
      */
-    @Component(hint = "grails-plugin")
+    @Parameter(defaultValue = "${component.org.apache.maven.artifact.handler.ArtifactHandler#grails-plugin}", readonly = true)
     protected ArtifactHandler artifactHandler;
 
     /**
      * The artifact handler.
      */
-    @Component(hint = "grails-binary-plugin")
+    @Parameter(defaultValue = "${component.org.apache.maven.artifact.handler.ArtifactHandler#grails-binary-plugin}")
     protected ArtifactHandler binaryArtifactHandler;
 
     @Override

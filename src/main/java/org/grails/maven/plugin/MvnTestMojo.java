@@ -37,7 +37,7 @@ public class MvnTestMojo extends AbstractGrailsMojo {
      * Set this to 'true' to bypass unit tests entirely. Its use is
       * @since 0.4
       */
-     @Parameter(property = "skipTests",defaultValue = "false")
+     @Parameter(property = "skipTests", defaultValue = "false")
      private boolean skipTests;
 
      /**
